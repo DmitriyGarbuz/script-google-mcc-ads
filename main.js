@@ -1,4 +1,11 @@
 function main() {
+  function deleteSheets () {
+  var spreadsheetID = "1gH9I67WqydwDQrSxCtiHlg_geoYFFc7y_Xag5xgrdSo";
+  var sheetName = "Баланс";
+  var sheet = SpreadsheetApp.openById(spreadsheetID).getSheetByName(sheetName);
+  sheet.clear();
+  }
+  deleteSheets ();
     var managerAccount = AdsApp.currentAccount();
           var accountIterator = AdsManagerApp.accounts()
      .withCondition('Impressions > 10')
@@ -93,7 +100,6 @@ function main() {
        Logger.log('results ' + results);
       var result =[results];
       var sheet = SpreadsheetApp.openById(spreadsheetID).getSheetByName(sheetName);
-      sheet.clear(); // If the table is empty then comment
       var columnStart = sheet.getRange('A1:D1');
       columnStart.setBackground('black');
       columnStart.setFontColor('white');

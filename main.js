@@ -1,7 +1,7 @@
 function main() {
   function deleteSheets () {
-  var spreadsheetID = "1gH9I67WqydwDQrSxCtiHlg_geoYFFc7y_Xag5xgrdSo";
-  var sheetName = "Баланс";
+  var spreadsheetID = "**********ID **************";
+  var sheetName = "***********Name ***********";
   var sheet = SpreadsheetApp.openById(spreadsheetID).getSheetByName(sheetName);
   sheet.clear();
   }

@@ -38,7 +38,9 @@ function main() {
             var last7DayCost =  (accountAds.getStatsFor("LAST_7_DAYS").getCost() / 7).toFixed(2); 
             var remainingDays = dayToPay(limit, stats, last7DayCost); //
             var row = [account, (limit - stats).toFixed(0), last7DayCost, remainingDays];
-          //  Logger.log([account, (limit - stats).toFixed(0), last7DayCost,remainingDays]);       
+           Logger.log(limit);
+           Logger.log(stats);
+           Logger.log([account, (limit - stats).toFixed(0), last7DayCost,remainingDays]);             
           } else {
         try {      
           var startDate = timeFormat(budgetOrder.getStartDateTime());
@@ -48,7 +50,9 @@ function main() {
           var last7DayCost =  (accountAds.getStatsFor("LAST_7_DAYS").getCost() / 7).toFixed(2);
           var remainingDays = dayToPay(limit, stats, last7DayCost);     
           var row = [account, (limit - stats).toFixed(0), last7DayCost, remainingDays];
-       //   Logger.log([account, (limit - stats).toFixed(0), last7DayCost, remainingDays]);
+          Logger.log(limit);
+          Logger.log(stats);
+          Logger.log([account, (limit - stats).toFixed(0), last7DayCost, remainingDays]);
         } catch (e) {
          // Logger.log(e);
         }
